@@ -41,7 +41,7 @@ function displayMatches(params) {
         <span class = "population">${place.population}</span>
       </li>
     `;
-  });
+  }).join(''); //join changes array to a string 
   suggestions.innerHTML = html;
 } //end displayMatches function
 
