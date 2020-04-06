@@ -28,9 +28,19 @@ function findMatches(wordToMatch, cities) {
     //this is where we look for matches
     const regex = new RegExp(wordToMatch, 'gi');
     return place.city.match(regex) || place.state.match(regex); 
-  })
-  
-}
+  }) //end return
+} //end findMatches function
+
+function displayMatches(params) {
+  const matchArray = findMatches (this.value, cities); 
+  console.log(matchArray);
+} //end displayMatches function
+
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
 
 </script>
 </body>
